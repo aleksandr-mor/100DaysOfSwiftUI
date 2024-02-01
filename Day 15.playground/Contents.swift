@@ -208,7 +208,7 @@ func rollDice() -> Int {
 
 
 func getUser() -> (firstName: String, lastName: String) {
-(firstName: "Taylor", lastName: "Swift")
+    (firstName: "Taylor", lastName: "Swift")
 }
 let user = getUser()
 print("Name: \(user.firstName) \(user.lastName)")
@@ -266,7 +266,7 @@ func checkPassword(_ password: String) throws -> String {
 }
 
 
-let string = "12345"
+let string1 = "12345"
 
 do {
     let result = try checkPassword(string)
@@ -276,3 +276,337 @@ do {
 } catch {
     print("There was an error.")
 }
+
+
+let sayHello = {
+    print("Hi there!")
+}
+
+sayHello()
+
+let sayHello1 = { (name: String) -> String in
+    "Hi \(name)!"
+}
+
+let team = ["Gloria", "Suzanne", "Tiffany", "Tasha"]
+
+let onlyT = team.filter({ (name: String) -> Bool in
+    return name.hasPrefix("T")
+})
+
+let team2 = ["Gloria", "Suzanne", "Tiffany", "Tasha"]
+
+let onlyT2 = team.filter({ (name: String) -> Bool in
+    name.hasPrefix("T")
+    
+})
+
+print(onlyT2)
+
+let onlyT3 = team.filter({ name in 
+    name.hasPrefix("T")
+})
+
+let onlyT4 = team.filter { name in
+    name.hasPrefix("T")
+}
+
+let onlyT5 = team.filter {
+    $0.hasPrefix("T")
+}
+
+
+struct Album {
+    let title: String
+    let artist: String
+    var isReleased = true
+    
+    func printSummary() {
+        print("\(title) ny \(artist)")
+    }
+}
+
+let red = Album(title: "Red", artist: "Taylor Swift")
+print(red.title)
+red.printSummary()
+
+mutating func removeFromScale() {
+    isReleased = false
+}
+
+
+struct Employee {
+    let name: String
+    var vacationAllocated = 14
+    var vacationTaken = 0
+    
+    var vacationRemaining: Int {
+        vacationAllocated - vacationTaken
+    }
+}
+
+var vacationRemaining: Int {
+    get {
+        vacationAllocated - vacationTaken
+    }
+    set {
+        vacationAllocated = vacationTaken + newValue
+    }
+}
+
+
+struct Game {
+    var score = 0 {
+        didSet {
+            print("Score is now \(score)")
+        }
+    }
+}
+
+var game = Game()
+game.score += 10
+game.score -= 3
+
+
+struct Player {
+    let name: String
+    let number: Int
+    
+    init(name: String) {
+        self.name = name
+        number = Int.random(in: 1...99)
+    }
+}
+
+struct BankAccount {
+    private(set) var funds = 0
+    
+    mutating func deposit(amount: Int) {
+        funds += amount
+    }
+    
+    mutating func withdraw(amount: Int) -> Bool {
+        if funds > amount {
+            funds -= amount
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+struct AppData {
+    static let version = "1.3 beta 2"
+    static let settings = "settings.json"
+}
+
+class Employee1 {
+    let hours: Int
+    
+    init(hours: Int) {
+        self.hours = hours
+    }
+    
+    func printSummary() {
+        print("I work \(hours) hours a day.")
+    }
+    override func printSummary() {
+        print("I spemd \(hours) hours a day searching Stack Overflow".)
+    }
+
+    
+}
+
+class Developer: Employee1 {
+    func work() {
+        print("I'm coding for \(hours) hours.")
+    }
+}
+
+let novall = Developer(hours: 8)
+novall.work()
+novall.printSummary()
+
+override func printSummary() {
+    print("I spend \(hours) hours a day searching Stack Overflow.")
+}
+
+class Vehicle {
+    let isElectric: Bool
+    
+    init(isElectric: Bool) {
+        self.isElectric = isElectric
+    }
+}
+
+class Car: Vehicle {
+    let isConvertible: Bool
+    
+    init(isElectric: Bool, isConvertible: Bool) {
+        self.isConvertible = isConvertible
+        super.init(isElectric: isElectric)
+    }
+}
+
+class Singer {
+    var name = "Adele"
+}
+
+var singer1 = Singer()
+var singer2 = singer1
+singer2.name = "Justin"
+print(singer1.name)
+print(singer2.name)
+
+class User {
+    let id: Int
+    init(id: Int) {
+        self.id = id
+        print("User \(id): I'm alive!")
+    }
+    
+    deinit {
+        print("User \(id): I'm dead!")
+    }
+}
+
+for i in 1...3 {
+    let user = User(id: i)
+    print("User \(user.id): I'm in control!")
+}
+
+class User1 {
+    var name = "Alex"
+}
+
+let user2 = User1()
+user2.name = "Taylor"
+print(user2.name)
+
+protocol Vehicle1 {
+    func estimateTime(for distance: Int) -> Int
+    func travel(distance: Int)
+}
+
+struct Car: Vehicle1 {
+    func estimateTime(for distance: Int) -> Int {
+        distance / 50
+    }
+    
+    func travel(distance: Int) {
+        print("I'm driving \(distance)km.")
+    }
+}
+
+func commute(distance: Int, using vehicle: Vehicle1) {
+    if vehicle.estimatedTime(for: distance) > 100 {
+        print("Too slow!")
+    } else {
+        vehicle.travel(distance: distance)
+    }
+}
+
+let car = Car()
+commute(distance: 100, using: car)
+
+protocol Vehicle1 {
+    var name: String { get }
+    var currentPassengers: Int { get set }
+    func estimateTime(for distance: Int) -> Int
+    func travel(distacne: Int)
+}
+
+let name = "Car"
+var currentPassengers = 1
+
+extension String {
+    func trimmed() -> String {
+        self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
+var quote = "  The truth is rarely pure and never simple  "
+
+let trimmed = quote.trimmed()
+
+
+extension String {
+    mutating func trim {
+        self = self.trimmed()
+    }
+}
+
+quote.trim()
+
+
+extension String {
+    var lines: [String] {
+        self.components(separatedBy: .newLines)
+    }
+}
+
+let lyrics = """
+But I keep cruising
+Can't stop, won't stop moving
+"""
+
+print(lyrics.lines.count)
+
+
+extension Collection {
+    var isNotEmpty: Bool {
+        isEmpty == false
+    }
+}
+
+let guests = ["Mario", "Luigi", "Peach"]
+
+if guests.isNotEmpty {
+    print("Guest count: \(guests.count)")
+}
+
+
+let opposites = [
+    "Mario": "Wario",
+    "Luigi": "Waluigi"
+]
+
+let peachOpposite = opposites["Peach"]
+
+if let marioOpposite = opposites["Mario"] {
+    print("Mario's opposite is \(marioOpposite)")
+}
+
+func printSquare(of number: Int?) {
+    guard let number = number else {
+        print("Missing input")
+        return
+    }
+    
+    print("\(number) x \(number) is \(number * number)")
+}
+
+let tvShows = ["Archer", "Babyloin 5", "Ted Lasso"]
+let favorite = tvShows.randomElement() ?? "None"
+
+let imput = ""
+let number = Int(input) ?? 0
+print(number)
+
+let names = ["Arya", "Bran", "Robb", "Sansa"]
+let chosen = names.randomElement()?.uppercased()
+print("Next in line \(chosen ?? "No one")")
+
+
+enum UserError: Error {
+    case badID, networkFailed
+}
+
+func getUser(id: Int) throws -> String {
+    throw UserError.networkFailed
+}
+
+if let user = try? getUser(id: 23) {
+    print("User: \(user)")
+}
+
