@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		47E2330F2C0D811500B1EBE2 /* WeSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E2330E2C0D811500B1EBE2 /* WeSplitApp.swift */; };
-		47E233112C0D811500B1EBE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E233102C0D811500B1EBE2 /* ContentView.swift */; };
-		47E233132C0D811700B1EBE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E233122C0D811700B1EBE2 /* Assets.xcassets */; };
-		47E233162C0D811700B1EBE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E233152C0D811700B1EBE2 /* Preview Assets.xcassets */; };
+		47F561412C8C2E6D0069E9A8 /* WeSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F561402C8C2E6D0069E9A8 /* WeSplitApp.swift */; };
+		47F561432C8C2E6D0069E9A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F561422C8C2E6D0069E9A8 /* ContentView.swift */; };
+		47F561452C8C2E6E0069E9A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F561442C8C2E6E0069E9A8 /* Assets.xcassets */; };
+		47F561482C8C2E6E0069E9A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F561472C8C2E6E0069E9A8 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		47E2330B2C0D811500B1EBE2 /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		47E2330E2C0D811500B1EBE2 /* WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitApp.swift; sourceTree = "<group>"; };
-		47E233102C0D811500B1EBE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		47E233122C0D811700B1EBE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		47E233152C0D811700B1EBE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		47F5613D2C8C2E6D0069E9A8 /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47F561402C8C2E6D0069E9A8 /* WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitApp.swift; sourceTree = "<group>"; };
+		47F561422C8C2E6D0069E9A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		47F561442C8C2E6E0069E9A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47F561472C8C2E6E0069E9A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		47E233082C0D811500B1EBE2 /* Frameworks */ = {
+		47F5613A2C8C2E6D0069E9A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,37 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		47E233022C0D811500B1EBE2 = {
+		47F561342C8C2E6D0069E9A8 = {
 			isa = PBXGroup;
 			children = (
-				47E2330D2C0D811500B1EBE2 /* WeSplit */,
-				47E2330C2C0D811500B1EBE2 /* Products */,
+				47F5613F2C8C2E6D0069E9A8 /* WeSplit */,
+				47F5613E2C8C2E6D0069E9A8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		47E2330C2C0D811500B1EBE2 /* Products */ = {
+		47F5613E2C8C2E6D0069E9A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				47E2330B2C0D811500B1EBE2 /* WeSplit.app */,
+				47F5613D2C8C2E6D0069E9A8 /* WeSplit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		47E2330D2C0D811500B1EBE2 /* WeSplit */ = {
+		47F5613F2C8C2E6D0069E9A8 /* WeSplit */ = {
 			isa = PBXGroup;
 			children = (
-				47E2330E2C0D811500B1EBE2 /* WeSplitApp.swift */,
-				47E233102C0D811500B1EBE2 /* ContentView.swift */,
-				47E233122C0D811700B1EBE2 /* Assets.xcassets */,
-				47E233142C0D811700B1EBE2 /* Preview Content */,
+				47F561402C8C2E6D0069E9A8 /* WeSplitApp.swift */,
+				47F561422C8C2E6D0069E9A8 /* ContentView.swift */,
+				47F561442C8C2E6E0069E9A8 /* Assets.xcassets */,
+				47F561462C8C2E6E0069E9A8 /* Preview Content */,
 			);
 			path = WeSplit;
 			sourceTree = "<group>";
 		};
-		47E233142C0D811700B1EBE2 /* Preview Content */ = {
+		47F561462C8C2E6E0069E9A8 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				47E233152C0D811700B1EBE2 /* Preview Assets.xcassets */,
+				47F561472C8C2E6E0069E9A8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -70,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		47E2330A2C0D811500B1EBE2 /* WeSplit */ = {
+		47F5613C2C8C2E6D0069E9A8 /* WeSplit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47E233192C0D811700B1EBE2 /* Build configuration list for PBXNativeTarget "WeSplit" */;
+			buildConfigurationList = 47F5614B2C8C2E6E0069E9A8 /* Build configuration list for PBXNativeTarget "WeSplit" */;
 			buildPhases = (
-				47E233072C0D811500B1EBE2 /* Sources */,
-				47E233082C0D811500B1EBE2 /* Frameworks */,
-				47E233092C0D811500B1EBE2 /* Resources */,
+				47F561392C8C2E6D0069E9A8 /* Sources */,
+				47F5613A2C8C2E6D0069E9A8 /* Frameworks */,
+				47F5613B2C8C2E6D0069E9A8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +84,25 @@
 			);
 			name = WeSplit;
 			productName = WeSplit;
-			productReference = 47E2330B2C0D811500B1EBE2 /* WeSplit.app */;
+			productReference = 47F5613D2C8C2E6D0069E9A8 /* WeSplit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		47E233032C0D811500B1EBE2 /* Project object */ = {
+		47F561352C8C2E6D0069E9A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					47E2330A2C0D811500B1EBE2 = {
+					47F5613C2C8C2E6D0069E9A8 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = 47E233062C0D811500B1EBE2 /* Build configuration list for PBXProject "WeSplit" */;
+			buildConfigurationList = 47F561382C8C2E6D0069E9A8 /* Build configuration list for PBXProject "WeSplit" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 47E233022C0D811500B1EBE2;
-			productRefGroup = 47E2330C2C0D811500B1EBE2 /* Products */;
+			mainGroup = 47F561342C8C2E6D0069E9A8;
+			productRefGroup = 47F5613E2C8C2E6D0069E9A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				47E2330A2C0D811500B1EBE2 /* WeSplit */,
+				47F5613C2C8C2E6D0069E9A8 /* WeSplit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		47E233092C0D811500B1EBE2 /* Resources */ = {
+		47F5613B2C8C2E6D0069E9A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E233162C0D811700B1EBE2 /* Preview Assets.xcassets in Resources */,
-				47E233132C0D811700B1EBE2 /* Assets.xcassets in Resources */,
+				47F561482C8C2E6E0069E9A8 /* Preview Assets.xcassets in Resources */,
+				47F561452C8C2E6E0069E9A8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		47E233072C0D811500B1EBE2 /* Sources */ = {
+		47F561392C8C2E6D0069E9A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E233112C0D811500B1EBE2 /* ContentView.swift in Sources */,
-				47E2330F2C0D811500B1EBE2 /* WeSplitApp.swift in Sources */,
+				47F561432C8C2E6D0069E9A8 /* ContentView.swift in Sources */,
+				47F561412C8C2E6D0069E9A8 /* WeSplitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		47E233172C0D811700B1EBE2 /* Debug */ = {
+		47F561492C8C2E6E0069E9A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,7 +208,7 @@
 			};
 			name = Debug;
 		};
-		47E233182C0D811700B1EBE2 /* Release */ = {
+		47F5614A2C8C2E6E0069E9A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,7 +264,7 @@
 			};
 			name = Release;
 		};
-		47E2331A2C0D811700B1EBE2 /* Debug */ = {
+		47F5614C2C8C2E6E0069E9A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -293,7 +293,7 @@
 			};
 			name = Debug;
 		};
-		47E2331B2C0D811700B1EBE2 /* Release */ = {
+		47F5614D2C8C2E6E0069E9A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -325,25 +325,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		47E233062C0D811500B1EBE2 /* Build configuration list for PBXProject "WeSplit" */ = {
+		47F561382C8C2E6D0069E9A8 /* Build configuration list for PBXProject "WeSplit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				47E233172C0D811700B1EBE2 /* Debug */,
-				47E233182C0D811700B1EBE2 /* Release */,
+				47F561492C8C2E6E0069E9A8 /* Debug */,
+				47F5614A2C8C2E6E0069E9A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47E233192C0D811700B1EBE2 /* Build configuration list for PBXNativeTarget "WeSplit" */ = {
+		47F5614B2C8C2E6E0069E9A8 /* Build configuration list for PBXNativeTarget "WeSplit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				47E2331A2C0D811700B1EBE2 /* Debug */,
-				47E2331B2C0D811700B1EBE2 /* Release */,
+				47F5614C2C8C2E6E0069E9A8 /* Debug */,
+				47F5614D2C8C2E6E0069E9A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 47E233032C0D811500B1EBE2 /* Project object */;
+	rootObject = 47F561352C8C2E6D0069E9A8 /* Project object */;
 }

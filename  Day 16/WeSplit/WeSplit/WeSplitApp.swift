@@ -2,7 +2,7 @@
 //  WeSplitApp.swift
 //  WeSplit
 //
-//  Created by Aleksandr Morozov on 6/2/24.
+//  Created by Aleksandr Morozov on 9/6/24.
 //
 
 import SwiftUI
