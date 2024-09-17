@@ -8,20 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showingAlert = false
+    var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", ]
     
-    var body: some View {
-        Button("Show alert") {
-            showingAlert = true
-        }
-        .alert("Important message", isPresented: $showingAlert) {
-            Button("Delete", role: .destructive) { }
-            Button("Cancel", role: .cancel) { }
-        } message: {
-            Text("Please read this.")
-        }
-    }
-}
+   
 
 #Preview {
     ContentView()
