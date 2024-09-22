@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  GuessTheFlag
-//
-//  Created by Aleksandr Morozov on 9/11/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -12,6 +5,9 @@ struct ContentView: View {
     @State private var correctAnswer = Int.random(in: 0...2)
     @State private var showingScore = false
     @State private var scoreTitle = ""
+    @State private var userScore = 0
+    @State private var questionNumber = 0
+    @State private var showingFinalAlert = false
     
     var body: some View  {
         ZStack{
@@ -51,12 +47,12 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 20)
                 .background(.regularMaterial)
-                .clipShape(.rect(cornerRadius: 20))
+                .clipShape(RoundedRectangle(cornerRadius: 20))
                 
                 Spacer()
                 Spacer()
                 
-                Text("Score: ???")
+                Text("Score: \(userScore)")
                     .foregroundStyle(.white)
                     .font(.title.bold())
                 Spacer()
@@ -66,25 +62,43 @@ struct ContentView: View {
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
         } message: {
-            Text("Your score is ???")
+            Text("Your score is \(userScore)")
+        }
+        .alert("Game Over", isPresented: $showingFinalAlert) {
+            Button("Restart", action: restartGame)
+        } message: {
+            Text("Your final score is \(userScore). Let's try again!")
+        }
+    }
+
+    func flagTapped(_ number: Int) {
+        if number == correctAnswer {
+            scoreTitle = "Correct"
+            userScore += 1
+        } else {
+            scoreTitle = "Wrong! That's the flag of \(countries[number])."
+        }
+        questionNumber += 1
+
+        if questionNumber == 8 {
+            showingFinalAlert = true
+        } else {
+            showingScore = true
+        }
+    }
+    
+    func askQuestion() {
+        countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
+    }
+    
+    func restartGame() {
+        questionNumber = 1
+        userScore = 0
+        askQuestion()
     }
 }
 
-func flagTapped(_ number: Int) {
-    if number == correctAnswer {
-        scoreTitle = "Correct"
-    } else {
-        scoreTitle = "Wrong"
-    }
-    
-    showingScore = true
-}
-func askQuestion() {
-    countries.shuffle()
-    correctAnswer = Int.random(in: 0...2)
-}
-}
 #Preview {
     ContentView()
 }
-
