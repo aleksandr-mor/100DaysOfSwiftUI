@@ -29,7 +29,7 @@ struct ContentView: View {
                     VStack {
                         Text("Tap the flag of")
                             .foregroundStyle(.secondary)
-                            .font(.subheadline.weight(.heavy))
+                            .titleStyle()
                         
                         Text(countries[correctAnswer])
                             .font(.largeTitle.weight(.semibold))
@@ -38,9 +38,7 @@ struct ContentView: View {
                         Button {
                             flagTapped(number)
                         } label: {
-                            Image(countries[number])
-                                .clipShape(.capsule)
-                                .shadow(radius: 5)
+                            FlagView(flag: self.countries[number])
                         }
                     }
                 }
@@ -96,6 +94,29 @@ struct ContentView: View {
         questionNumber = 1
         userScore = 0
         askQuestion()
+    }
+}
+
+struct FlagView: View {
+    let flag: String
+    var body: some View {
+        Image(flag)
+            .clipShape(.capsule)
+            .shadow(radius: 5)
+    }
+}
+
+struct Title: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.title)
+            .foregroundColor(.blue)
+    }
+}
+
+extension View {
+    func titleStyle() -> some View {
+        modifier(Title())
     }
 }
 
