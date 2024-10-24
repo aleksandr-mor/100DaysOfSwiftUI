@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-<<<<<<< HEAD
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
@@ -18,9 +17,13 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var score = 0
+    
     var body: some View {
         NavigationStack {
             List {
+                Text("Score: \(score)")
+                    .font(.headline)
                 Section {
                     TextField("Enter your word", text: $newWord)
                         .textInputAutocapitalization(.never)
@@ -43,6 +46,18 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        startGame()
+                        usedWords.removeAll()
+                        score = 0
+                    }) {
+                        Image(systemName: "arrow.clockwise")
+                        
+                    }
+                }
+            }
         }
     }
     
@@ -50,6 +65,16 @@ struct ContentView: View {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         
         guard answer.count > 0 else { return }
+        
+        guard answer != rootWord.lowercased() else {
+            wordError(title: "Word is the same", message: "It would be too easy!")
+            return
+        }
+        
+        guard answer.count >= 3 else {
+            wordError(title: "Word is too short", message: "Make it longer!")
+            return
+        }
         
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original!")
@@ -68,6 +93,7 @@ struct ContentView: View {
         
         withAnimation {
             usedWords.insert(answer, at: 0)
+            updateScore(word: answer)
         }
         
         newWord = ""
@@ -88,6 +114,7 @@ struct ContentView: View {
     func isOriginal(word: String) -> Bool {
         !usedWords.contains(word)
     }
+    
     
     func isPossible(word: String) -> Bool {
         var tempWord = rootWord
@@ -110,30 +137,34 @@ struct ContentView: View {
         return misspelledRange.location == NSNotFound
     }
     
+    func updateScore(word: String) {
+        score += word.count
+    }
+    
     func wordError(title: String, message: String) {
         errorTitle = title
         errorMessage = message
         showingError = true
-=======
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        var body: some View {
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+            }
+            .padding()
         }
-        .padding()
-    }
-    
-    func testStrings() {
-        let word = "swift"
-        let checker = UITextChecker()
         
-        let range = NSRange(location: 0, length: word.utf16.count)
-        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-        
-        let allGood = misspelledRange.location == NSNotFound
->>>>>>> 191150355583eb55abe978b0ec0ae602caf891af
+        func testStrings() {
+            let word = "swift"
+            let checker = UITextChecker()
+            
+            let range = NSRange(location: 0, length: word.utf16.count)
+            let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
+            
+            let allGood = misspelledRange.location == NSNotFound
+        }
     }
 }
 
